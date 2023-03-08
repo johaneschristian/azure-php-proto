@@ -26,6 +26,7 @@ return array(
     'App\\Providers\\BroadcastServiceProvider' => $baseDir . '/app/Providers/BroadcastServiceProvider.php',
     'App\\Providers\\EventServiceProvider' => $baseDir . '/app/Providers/EventServiceProvider.php',
     'App\\Providers\\RouteServiceProvider' => $baseDir . '/app/Providers/RouteServiceProvider.php',
+    'App\\Utilities\\MicrosoftAuthenticator' => $baseDir . '/app/Utilities/MicrosoftAuthenticator.php',
     'Attribute' => $vendorDir . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
     'Beta\\Microsoft\\Graph\\CallRecords\\Model\\AudioCodec' => $vendorDir . '/microsoft/microsoft-graph/src/Beta/Microsoft/Graph/CallRecords/Model/AudioCodec.php',
     'Beta\\Microsoft\\Graph\\CallRecords\\Model\\CallRecord' => $vendorDir . '/microsoft/microsoft-graph/src/Beta/Microsoft/Graph/CallRecords/Model/CallRecord.php',
@@ -12065,10 +12066,5 @@ return array(
     'Whoops\\Util\\Misc' => $vendorDir . '/filp/whoops/src/Whoops/Util/Misc.php',
     'Whoops\\Util\\SystemFacade' => $vendorDir . '/filp/whoops/src/Whoops/Util/SystemFacade.php',
     'Whoops\\Util\\TemplateHelper' => $vendorDir . '/filp/whoops/src/Whoops/Util/TemplateHelper.php',
-    'myPHPnotes\\Microsoft\\Auth' => $vendorDir . '/adnanhussainturki/microsoft-api-php/src/Auth.php',
-    'myPHPnotes\\Microsoft\\Exceptions\\UnauthenticatedException' => $vendorDir . '/adnanhussainturki/microsoft-api-php/src/Exceptions/UnauthenticatedException.php',
-    'myPHPnotes\\Microsoft\\Handlers\\Session' => $vendorDir . '/adnanhussainturki/microsoft-api-php/src/Handlers/Session.php',
-    'myPHPnotes\\Microsoft\\Models\\BaseModel' => $vendorDir . '/adnanhussainturki/microsoft-api-php/src/Models/BaseModel.php',
-    'myPHPnotes\\Microsoft\\Models\\User' => $vendorDir . '/adnanhussainturki/microsoft-api-php/src/Models/User.php',
     'voku\\helper\\ASCII' => $vendorDir . '/voku/portable-ascii/src/voku/helper/ASCII.php',
 );

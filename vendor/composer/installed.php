@@ -1,24 +1,15 @@
 <?php return array(
     'root' => array(
         'name' => 'laravel/laravel',
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
-        'reference' => NULL,
+        'pretty_version' => 'dev-master',
+        'version' => 'dev-master',
+        'reference' => '30c99e5fc9423033323e1d32083a87e928faca48',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
         'dev' => true,
     ),
     'versions' => array(
-        'adnanhussainturki/microsoft-api-php' => array(
-            'pretty_version' => '0.03',
-            'version' => '0.03.0.0',
-            'reference' => '1d38a17e1507287c6b03301656ed7b8c235246ac',
-            'type' => 'library',
-            'install_path' => __DIR__ . '/../adnanhussainturki/microsoft-api-php',
-            'aliases' => array(),
-            'dev_requirement' => false,
-        ),
         'brick/math' => array(
             'pretty_version' => '0.10.2',
             'version' => '0.10.2.0',
@@ -380,9 +371,9 @@
             'dev_requirement' => false,
         ),
         'laravel/laravel' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
-            'reference' => NULL,
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
+            'reference' => '30c99e5fc9423033323e1d32083a87e928faca48',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

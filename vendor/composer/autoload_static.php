@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit79c244abdad7fba8ae74d8b00df83fa0
+class ComposerStaticInit30162e66ad20a079aa2cb5c6fa088ef7
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
@@ -18,12 +18,12 @@ class ComposerStaticInit79c244abdad7fba8ae74d8b00df83fa0
         'b6b991a57620e2fb6b2f66f03fe9ddc2' => __DIR__ . '/..' . '/symfony/string/Resources/functions.php',
         'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
         '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
-        'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
         '3bd81c9b8fcc150b69d8b63b4d2ccf23' => __DIR__ . '/..' . '/spatie/flare-client-php/src/helpers.php',
-        '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
+        'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
         '35a6ad97d21e794e7e22a17d806652e4' => __DIR__ . '/..' . '/nunomaduro/termwind/src/Functions.php',
         '09f6b20656683369174dd6fa83b7e5fb' => __DIR__ . '/..' . '/symfony/polyfill-uuid/bootstrap.php',
         'a1105708a18b76903365ca1c4aa61b02' => __DIR__ . '/..' . '/symfony/translation/Resources/functions.php',
+        '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
         'e39a8b23c42d4e1452234d762b03835a' => __DIR__ . '/..' . '/ramsey/uuid/src/functions.php',
@@ -40,10 +40,6 @@ class ComposerStaticInit79c244abdad7fba8ae74d8b00df83fa0
         'v' => 
         array (
             'voku\\' => 5,
-        ),
-        'm' => 
-        array (
-            'myPHPnotes\\Microsoft\\' => 21,
         ),
         'W' => 
         array (
@@ -179,10 +175,6 @@ class ComposerStaticInit79c244abdad7fba8ae74d8b00df83fa0
         'voku\\' => 
         array (
             0 => __DIR__ . '/..' . '/voku/portable-ascii/src/voku',
-        ),
-        'myPHPnotes\\Microsoft\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/adnanhussainturki/microsoft-api-php/src',
         ),
         'Whoops\\' => 
         array (
@@ -543,6 +535,7 @@ class ComposerStaticInit79c244abdad7fba8ae74d8b00df83fa0
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
+        'App\\Utilities\\MicrosoftAuthenticator' => __DIR__ . '/../..' . '/app/Utilities/MicrosoftAuthenticator.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
         'Beta\\Microsoft\\Graph\\CallRecords\\Model\\AudioCodec' => __DIR__ . '/..' . '/microsoft/microsoft-graph/src/Beta/Microsoft/Graph/CallRecords/Model/AudioCodec.php',
         'Beta\\Microsoft\\Graph\\CallRecords\\Model\\CallRecord' => __DIR__ . '/..' . '/microsoft/microsoft-graph/src/Beta/Microsoft/Graph/CallRecords/Model/CallRecord.php',
@@ -12582,21 +12575,16 @@ class ComposerStaticInit79c244abdad7fba8ae74d8b00df83fa0
         'Whoops\\Util\\Misc' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Util/Misc.php',
         'Whoops\\Util\\SystemFacade' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Util/SystemFacade.php',
         'Whoops\\Util\\TemplateHelper' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Util/TemplateHelper.php',
-        'myPHPnotes\\Microsoft\\Auth' => __DIR__ . '/..' . '/adnanhussainturki/microsoft-api-php/src/Auth.php',
-        'myPHPnotes\\Microsoft\\Exceptions\\UnauthenticatedException' => __DIR__ . '/..' . '/adnanhussainturki/microsoft-api-php/src/Exceptions/UnauthenticatedException.php',
-        'myPHPnotes\\Microsoft\\Handlers\\Session' => __DIR__ . '/..' . '/adnanhussainturki/microsoft-api-php/src/Handlers/Session.php',
-        'myPHPnotes\\Microsoft\\Models\\BaseModel' => __DIR__ . '/..' . '/adnanhussainturki/microsoft-api-php/src/Models/BaseModel.php',
-        'myPHPnotes\\Microsoft\\Models\\User' => __DIR__ . '/..' . '/adnanhussainturki/microsoft-api-php/src/Models/User.php',
         'voku\\helper\\ASCII' => __DIR__ . '/..' . '/voku/portable-ascii/src/voku/helper/ASCII.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit79c244abdad7fba8ae74d8b00df83fa0::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit79c244abdad7fba8ae74d8b00df83fa0::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit79c244abdad7fba8ae74d8b00df83fa0::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit79c244abdad7fba8ae74d8b00df83fa0::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit30162e66ad20a079aa2cb5c6fa088ef7::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit30162e66ad20a079aa2cb5c6fa088ef7::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit30162e66ad20a079aa2cb5c6fa088ef7::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit30162e66ad20a079aa2cb5c6fa088ef7::$classMap;
 
         }, null, ClassLoader::class);
     }
