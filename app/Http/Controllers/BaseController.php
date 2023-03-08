@@ -12,8 +12,8 @@ use GuzzleHttp\Client;
 class BaseController extends Controller
 {
     private $tenant = "common";
-    private $client_id = "";
-    private $client_secret = "";
+    private $client_id = "6e2164e2-474d-458d-9857-76553f227531";
+    private $client_secret = "xjz8Q~J-qlgkbVq2w4qIOH344bo6kCXiGyzDFdqD";
     private $callback = "http://localhost:8000/callback";
     private $scopes = ["User.Read"];
 
@@ -47,8 +47,6 @@ class BaseController extends Controller
 
     public function callback(Request $request) {
         $auth_code = $request['code'];
-        $auth_state = $request['state'];
-
         $microsoft_auth = new Auth(
             $this->tenant, 
             $this->client_id, 
@@ -57,7 +55,7 @@ class BaseController extends Controller
             $this->scopes
         );
 
-        $tokens = $microsoft_auth->getToken($auth_code, $auth_state);
+        $tokens = $microsoft_auth->getToken($auth_code, "");
         $access_token = $tokens->access_token;
         return $this->retrieveEmail($access_token);       
     }
