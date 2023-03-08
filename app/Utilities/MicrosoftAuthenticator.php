@@ -5,7 +5,7 @@ use GuzzleHttp\Client;
 
 class MicrosoftAuthenticator {
     protected $microsoft_host = 'https://login.microsoftonline.com/';
-    protected $graph_microsoft = 'https://graph.microsoft.com';
+    protected $graph_microsoft = 'https://graph.microsoft.com/v1.0/me';
     protected $tenant_id;
     protected $client_id;
     protected $client_secret;
@@ -56,14 +56,12 @@ class MicrosoftAuthenticator {
     }
 
     public function getUserDataFromAccessToken($access_token) {
-        $client = new Client(['base_uri' => $this->graph_microsoft]);
-        $auth_response = $client->request(
-            'GET',
-            '/v1.0/me',
+        $client = new Client();
+        $auth_response = $client->get($this->graph_microsoft,
             ['headers' => [
                 'Authorization' => 'Bearer ' . $access_token
             ]]
-            );
+        );
         
         $user_data = json_decode($auth_response->getBody(), true);
         return $user_data;
