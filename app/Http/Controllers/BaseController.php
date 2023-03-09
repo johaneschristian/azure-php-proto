@@ -11,8 +11,8 @@ use App\Utilities\MicrosoftAuthenticator;
 class BaseController extends Controller
 {
     private $tenant = "common";
-    private $client_id = "4b49143a-2616-49c0-b33a-53dbc41d6e57";
-    private $client_secret = "ecb8Q~BhpWYZmVYKCEMRyhlRb5J8yk8cmcFxpa2L";
+    private $client_id =;
+    private $client_secret =;
     private $callback = "http://localhost:8000/callback";
     private $scopes = ["User.Read"];
 
