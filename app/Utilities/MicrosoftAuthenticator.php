@@ -4,6 +4,10 @@ namespace App\Utilities;
 use GuzzleHttp\Client;
 
 class MicrosoftAuthenticator {
+    /**
+     * MicrosoftAuthenticator class is adapted from https://github.com/AdnanHussainTurki 
+     * to meet the needs of the application.
+     */
     protected $microsoft_host = 'https://login.microsoftonline.com/';
     protected $graph_microsoft = 'https://graph.microsoft.com/v1.0/me';
     protected $tenant_id;
@@ -33,7 +37,7 @@ class MicrosoftAuthenticator {
         return $auth_url;
     }
 
-    public function getToken(string $code)
+    public function getToken($code)
     {
         $client = new Client();
         $url = $this->microsoft_host . $this->tenant_id . "/oauth2/v2.0/token";
@@ -46,8 +50,9 @@ class MicrosoftAuthenticator {
                 'grant_type' => 'authorization_code',
                 'code' => $code
             ],
-        ])->getBody()->getContents();
+        ])->getBody();
 
+        // Return tokens as an object
         return json_decode($tokens);
     }
 
@@ -63,11 +68,11 @@ class MicrosoftAuthenticator {
             ]]
         );
         
-        $user_data = json_decode($auth_response->getBody(), true);
+        $user_data = json_decode($auth_response->getBody());
         return $user_data;
     }
 
     public function getUserEmailFromAccessToken($access_token) {
-        return $this->getUserDataFromAccessToken($access_token)['userPrincipalName'];
+        return $this->getUserDataFromAccessToken($access_token)->userPrincipalName;
     }
 }
